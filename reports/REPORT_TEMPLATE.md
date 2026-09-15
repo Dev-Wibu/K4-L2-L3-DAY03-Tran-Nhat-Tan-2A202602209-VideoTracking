@@ -2,20 +2,20 @@
 
 Chép file này thành `reports/REPORT.md` rồi điền. Giữ nguyên các tiêu đề.
 
-Họ tên / nhóm: `...`
-Ngày: `...`
+Họ tên : `Trần Nhật Tân`
+Ngày: `15/09/2026`
 
 ---
 
 ## 1. Quá trình gán nhãn
 
-| Mục | Giá trị |
-| --- | --- |
-| Công cụ | CVAT / khác: `...` |
-| Thời gian gán `clip_02` (warm-up) | `...` phút |
-| Thời gian gán `clip_01` | `...` phút |
-| Số track đã vẽ trong `clip_01` | `...` |
-| Số keyframe trung bình mỗi track | `...` |
+| Mục                              | Giá trị           |
+| -------------------------------- | ----------------- |
+| Công cụ                          | CVAT / khác:`...` |
+| Thời gian gán`clip_02` (warm-up) | `...` phút        |
+| Thời gian gán`clip_01`           | `...` phút        |
+| Số track đã vẽ trong`clip_01`    | `...`             |
+| Số keyframe trung bình mỗi track | `...`             |
 
 Ba tình huống khó nhất khi gán clip này, và bạn xử lý thế nào:
 
@@ -40,44 +40,44 @@ Ca nào hai người quyết khác nhau, và luật nào còn thiếu trong `GUI
 
 ## 3. Pre-gold lock và chấm trước/sau rework
 
-| Evidence | Giá trị |
-| --- | --- |
-| SHA-256 từ `evidence/pre-gold/clip_01/manifest.json` | `...` |
-| Thời điểm khóa | `...` |
-| Số row / frame / track trước khi mở reference | `...` |
+| Evidence                                            | Giá trị |
+| --------------------------------------------------- | ------- |
+| SHA-256 từ`evidence/pre-gold/clip_01/manifest.json` | `...`   |
+| Thời điểm khóa                                      | `...`   |
+| Số row / frame / track trước khi mở reference       | `...`   |
 
-| | HOTA | DetA | AssA | LocA | IDF1 | MOTA | MOTP | FP | FN | IDSW |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Bản pre-gold | | | | | | | | | | |
-| Sau rework | | | | | | | | | | |
+|              | HOTA | DetA | AssA | LocA | IDF1 | MOTA | MOTP |  FP |  FN | IDSW |
+| ------------ | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --: | --: | ---: |
+| Bản pre-gold |      |      |      |      |      |      |      |     |     |      |
+| Sau rework   |      |      |      |      |      |      |      |     |     |      |
 
 Qua cổng (`IDF1 >= 0.80`, `MOTA >= 0.75`, `MOTP >= 0.70`): **có / chưa**
 
 Sau khi đọc danh sách lỗi, bạn đã sửa cụ thể những gì? Ghi theo frame và ID:
 
-| Loại lỗi | Frame | ID | Đã sửa thế nào |
-| --- | --- | --- | --- |
-| | | | |
-| | | | |
-| | | | |
+| Loại lỗi | Frame | ID  | Đã sửa thế nào |
+| -------- | ----- | --- | -------------- |
+|          |       |     |                |
+|          |       |     |                |
+|          |       |     |                |
 
 ## 4. Kết quả model: ByteTrack control vs ReID treatment
 
 Cấu hình từ `outputs/model_run_config.json`:
 
-| Mục | Giá trị |
-| --- | --- |
-| Python / ultralytics / torch / lap | `...` |
-| weights / hai tracker | `...` |
-| conf / IoU / imgsz / classes | `...` |
-| device | `...` |
+| Mục                                | Giá trị |
+| ---------------------------------- | ------- |
+| Python / ultralytics / torch / lap | `...`   |
+| weights / hai tracker              | `...`   |
+| conf / IoU / imgsz / classes       | `...`   |
+| device                             | `...`   |
 
-| So sánh | HOTA | DetA | AssA | LocA | IDF1 | MOTA | MOTP | FP | FN | IDSW |
-| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| bạn vs gold | | | | | | | | | | |
-| ByteTrack control vs gold | | | | | | | | | | |
-| BoT-SORT + ReID vs gold | | | | | | | | | | |
-| ReID vs bạn | | | | | | | | | | |
+| So sánh                   | HOTA | DetA | AssA | LocA | IDF1 | MOTA | MOTP |  FP |  FN | IDSW |
+| ------------------------- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --: | --: | ---: |
+| bạn vs gold               |      |      |      |      |      |      |      |     |     |      |
+| ByteTrack control vs gold |      |      |      |      |      |      |      |     |     |      |
+| BoT-SORT + ReID vs gold   |      |      |      |      |      |      |      |     |     |      |
+| ReID vs bạn               |      |      |      |      |      |      |      |     |     |      |
 
 ## 5. Phân tích — năm câu hỏi
 

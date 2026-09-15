@@ -1,0 +1,166 @@
+{
+  "clip": "clip_01",
+  "frames": 190,
+  "iou_threshold": 0.5,
+  "pred_file": "outputs\\model_reid_clip_01.txt",
+  "gt_file": "annotations\\clip_01\\gt.txt",
+  "pred_label": "yolo26n.pt + BoT-SORT + ReID treatment",
+  "gt_label": "nhan cua ban",
+  "metrics": {
+    "HOTA": 0.7561,
+    "DetA": 0.7027,
+    "AssA": 0.8141,
+    "LocA": 0.908,
+    "IDF1": 0.8719,
+    "IDTP": 541,
+    "IDFP": 73,
+    "IDFN": 86,
+    "MOTA": 0.748,
+    "MOTP": 0.9013,
+    "IDSW": 1,
+    "FP": 72,
+    "FN": 85,
+    "GT_boxes": 627,
+    "PRED_boxes": 614
+  },
+  "gate": {
+    "checks": {
+      "IDF1": {
+        "value": 0.8718775181305399,
+        "required": 0.8,
+        "passed": true
+      },
+      "MOTA": {
+        "value": 0.7480063795853269,
+        "required": 0.75,
+        "passed": false
+      },
+      "MOTP": {
+        "value": 0.9013099471501733,
+        "required": 0.7,
+        "passed": true
+      }
+    },
+    "passed": false
+  },
+  "diagnostics": {
+    "missed_gt_tracks": [],
+    "fragmented_gt_tracks": [
+      {
+        "gt_track": 5,
+        "pred_tracks": [
+          30,
+          21
+        ],
+        "frames_each": {
+          "30": 46,
+          "21": 1
+        },
+        "gt_length": 72
+      }
+    ],
+    "partially_covered_gt_tracks": [
+      {
+        "gt_track": 6,
+        "covered": 45,
+        "gt_length": 79,
+        "ratio": 0.57
+      },
+      {
+        "gt_track": 5,
+        "covered": 47,
+        "gt_length": 72,
+        "ratio": 0.65
+      }
+    ],
+    "ghost_pred_tracks": [
+      {
+        "pred_track": 9,
+        "reason": "không khớp track tham chiếu nào",
+        "frames": [
+          17,
+          116
+        ],
+        "length": 42
+      },
+      {
+        "pred_track": 39,
+        "reason": "không khớp track tham chiếu nào",
+        "frames": [
+          106,
+          121
+        ],
+        "length": 16
+      },
+      {
+        "pred_track": 64,
+        "reason": "không khớp track tham chiếu nào",
+        "frames": [
+          167,
+          178
+        ],
+        "length": 10
+      },
+      {
+        "pred_track": 59,
+        "reason": "không khớp track tham chiếu nào",
+        "frames": [
+          163,
+          163
+        ],
+        "length": 1
+      },
+      {
+        "pred_track": 65,
+        "reason": "không khớp track tham chiếu nào",
+        "frames": [
+          169,
+          169
+        ],
+        "length": 1
+      }
+    ],
+    "id_switches": [
+      {
+        "frame": 94,
+        "gt_track": 5,
+        "from_track": 21,
+        "to_track": 30
+      }
+    ],
+    "loose_boxes": [
+      {
+        "frame": 140,
+        "gt_track": 1,
+        "pred_track": 3,
+        "iou": 0.518
+      },
+      {
+        "frame": 138,
+        "gt_track": 1,
+        "pred_track": 3,
+        "iou": 0.55
+      },
+      {
+        "frame": 111,
+        "gt_track": 6,
+        "pred_track": 45,
+        "iou": 0.58
+      },
+      {
+        "frame": 110,
+        "gt_track": 6,
+        "pred_track": 45,
+        "iou": 0.592
+      },
+      {
+        "frame": 112,
+        "gt_track": 6,
+        "pred_track": 45,
+        "iou": 0.595
+      }
+    ],
+    "n_gt_tracks": 8,
+    "n_pred_tracks": 14
+  }
+}
